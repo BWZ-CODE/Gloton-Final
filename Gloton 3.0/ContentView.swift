@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var selectedTab = 0
    
     
-    var categories = ["Recomendados", "Entradas", "Sopas", "Postres", "Veggie"]
+    var categories = ["Recomendados", "Faciles","Entradas", "Sopas", "Postres", "Veggie"]
     var recomendados = ["Pollo con champiñones", "Ensalada Cesar", "Lasagna", "Pizza Margherita"]
     
     
@@ -100,15 +100,18 @@ struct HomeScreenView: View {
                     RecomendadosView()
                         .transition(.slide)
                 }else if selectedCategory == 1 {
-                    EntradasView()
+                    facilesView()
                         .transition(.slide)
                 }else if selectedCategory == 2 {
-                    SopasView()
+                    EntradasView()
                         .transition(.slide)
                 }else if selectedCategory == 3 {
-                    PostresView()
+                    SopasView()
                         .transition(.slide)
                 }else if selectedCategory == 4 {
+                    PostresView()
+                        .transition(.slide)
+                }else if selectedCategory == 5 {
                     VeggieView()
                         .transition(.slide)
                 }
@@ -230,6 +233,14 @@ struct RecomendadosView: View {
         
         
     }
+}
+
+//Vista de faciles
+struct facilesView: View {
+    var body: some View {
+        Text("Faciles")
+    }
+    
 }
 
 // Vista de entradas
